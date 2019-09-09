@@ -1,7 +1,15 @@
-{% extends layout.html %}
+{% extends 'layout.html' %}
 
 {% block content %}
-
-
+    <table>
+    <tr>
+        <th>Full name</th>
+        <th>Phone number</th>
+    </tr>
+    <tr>
+        <td>{{ data.first_name }} {{ data.last_name }}</td>
+        <td>{{ data.phone_number }}</td>
+    </tr>
+    </table>
 
 {% endblock %}

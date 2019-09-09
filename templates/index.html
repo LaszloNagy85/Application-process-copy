@@ -1,5 +1,14 @@
 {% extends "layout.html" %}
 
 {% block content %}
-    <a href="{{ url_for('mentor_names') }}">Mentor names</a>
+    <ul>
+        <li><a href="{{ url_for('route_mentor_names') }}">Mentor names</a></li>
+        <li><a href="{{ url_for('route_first_last_names') }}">All First and Last Names</a></li>
+        <li><a href="{{ url_for('route_miskolc_nick_names') }}">Mentor's nicks from Miskolc</a></li>
+        <li><a href="{{ url_for('route_get_carol_applicant_data') }}">Carol applicant's data</a></li>
+        <li><a href="{{ url_for('route_get_hat_owner_applicant_data') }}">Hat owner's data</a></li>
+        <li><a href="{{ url_for('route_add_new_applicant') }}">New applicant's data</a></li>
+        <li><a href="{{ url_for('route_update_and_show') }}">Update Jamima's phone number</a></li>
+        <li><a href="{{ url_for('route_delete_and_show_all') }}">Delete applicants with email @mauriseu.net</a></li>
+    </ul>
 {% endblock %}

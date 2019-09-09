@@ -2,9 +2,21 @@
 
 {% block content %}
     <div id="mentors">
-        {% for mentor_name in mentor_names %}
-            {{ mentor_name.first_name + " " + mentor_name.last_name }}<br/>
-        {% endfor%}
+        <table>
+            <tr>
+                {% for key in data[0].keys() %}
+                    <th>{{ (key.replace('_', ' ')).capitalize() }}</th>
+                {% endfor %}
+            </tr>
+
+            {% for row in data %}
+            <tr>
+                {% for value in row.values() %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+            {% endfor%}
+        </table>
     </div>
 
     {% include 'footer.html' %}
